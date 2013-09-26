@@ -1,0 +1,4 @@
+argparse==1.2.1
+-e git+https://github.com/dbravender/mariposa.git@426e6c949c2e434129b2f63fa8c69bcdbdd56d04#egg=mariposa-master
+psycopg2==2.5.1
+wsgiref==0.1.2
