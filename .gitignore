@@ -2,3 +2,4 @@ metronome
 *~
 SECRETS.py
 env
+*.pyc
