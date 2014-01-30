@@ -5,6 +5,8 @@ from datetime import datetime
 import urlparse
 import psycopg2
 
+from exporters.standard import export as se
+
 
 urlparse.uses_netloc.append("postgres")
 DB_CONN = os.environ['METRONOME_DB']
