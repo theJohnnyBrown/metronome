@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 import urlparse
 import psycopg2
 

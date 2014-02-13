@@ -26,5 +26,5 @@ def export(client):
         print "\t".join([time_in.strftime("%Y-%m-%d"),
                          str((time_out - time_in).total_seconds()/3600.0) if time_out else "",
                          notes if notes else "",
-                         str(time_in),
-                         str(time_out) if time_out else ""])
+                         str(time_in.strftime("%c")),
+                         str(time_out.strftime("%c")) if time_out else ""])
