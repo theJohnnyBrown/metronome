@@ -1,0 +1,9 @@
+#!/bin/bash
+METRONOME_DIR=/Users/jb/Desktop/metronome
+
+source $METRONOME_DIR/env
+source $METRONOME_DIR/metronome/bin/activate
+cd $METRONOME_DIR/src
+ipython -i ./metronome.py
+cd -
+
