@@ -1,9 +1,15 @@
 #!/bin/bash
-METRONOME_DIR=/Users/jb/Desktop/metronome
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+METRONOME_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+METRONOME_DIR=$METRONOME_DIR/../
 
 source $METRONOME_DIR/env
-source $METRONOME_DIR/metronome/bin/activate
+source $METRONOME_DIR/metronome-venv/bin/activate
 cd $METRONOME_DIR/src
 ipython -i ./metronome.py
 cd -
-

@@ -1,5 +1,4 @@
-/metronome
+/metronome-venv
 *~
-SECRETS.py
 env
 *.pyc
